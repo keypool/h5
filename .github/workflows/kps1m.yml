@@ -30,7 +30,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_HUAWEICLOUD_1 }}
           ARGS: '-rltgoDzvO --delete'
-          SOURCE: 'dist/m/'
+          SOURCE: '/show-1/dist/m/'
           REMOTE_HOST: ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }}
           REMOTE_USER: ${{ secrets.SERVER_USER_NAME_HUAWEICLOUD_1 }}
           TARGET: ${{ secrets.SERVER_SERVICE_TARGET }}/kps1m
