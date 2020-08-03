@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   // }
 }));
 
-export default ({no, arrow=true}: any) => {
+export default ({no, arrow=true, children}: any) => {
   const classes = useStyles();
 
   return (
@@ -47,6 +47,8 @@ export default ({no, arrow=true}: any) => {
         <Typography variant={"body2"} align={"left"} className={classes.title2}>轻松入场，抢占Filecoin头矿福利</Typography>
       </div>
       <img src={`${PATH_PREFIX}/static/home/1-5.png`} className={classes.img} /> */}
+      {/* <Music/> */}
+      {children}
       {arrow && <Arrow/>}
     </div>
   );

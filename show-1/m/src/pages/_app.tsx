@@ -39,6 +39,7 @@ export default function MyApp(props: Props) {
         <meta name="x5-fullscreen" content="true"/>
         <meta content="telephone=no" name="format-detection" />
         <meta content="email=no" name="format-detection" />
+        <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=GYr2GHaH0YqrK2FlkjkrhOsVh78g3tct"></script>
         {/* <script src={`${PATH_PREFIX}/lib/analytics.js`}></script> */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
         {/* <script src={`${PATH_PREFIX}/lib/judge-terminal-equipment.js`}/> */}
