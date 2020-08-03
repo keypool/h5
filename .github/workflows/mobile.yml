@@ -1,9 +1,9 @@
-name: web mobile ci
+name: web kps1m ci
 
 on:
   push:
     branches:
-      - mobile
+      - kps1m
 
 jobs:
   build-and-deploy-to-server:
