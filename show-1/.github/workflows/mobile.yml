@@ -1,0 +1,37 @@
+name: web mobile ci
+
+on:
+  push:
+    branches:
+      - mobile
+
+jobs:
+  build-and-deploy-to-server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: ssh-agent
+        uses: webfactory/ssh-agent@v0.1.1
+        with:
+          ssh-private-key: ${{ secrets.SERVER_SSH_KEY_HUAWEICLOUD_1 }}
+        env:
+          SERVER_HOST_NAME: ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }}
+
+      - name: Setup knownhosts
+        run: ssh-keyscan ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }} >> ~/.ssh/known_hosts
+
+      - name: Run SSH Command To init directory
+        run: ssh root@${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }} "(mkdir ${{ secrets.SERVER_SERVICE_TARGET }}/kps1m || true)"
+
+      - name: Deploy home to Server
+        uses: easingthemes/ssh-deploy@v2.1.2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_HUAWEICLOUD_1 }}
+          ARGS: '-rltgoDzvO --delete'
+          SOURCE: 'dist/m/'
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_NAME_HUAWEICLOUD_1 }}
+          TARGET: ${{ secrets.SERVER_SERVICE_TARGET }}/kps1m
+  
