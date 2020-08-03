@@ -3,6 +3,8 @@ import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Provider from '@/app/provider';
 import {PATH_PREFIX} from "@/env";
+import '../styles/global.css';
+import 'swiper/swiper-bundle.css';
 
 interface Props {
   Component: any
