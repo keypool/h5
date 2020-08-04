@@ -1,26 +1,43 @@
 import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Typography from '@material-ui/core/Typography';
-// import Top from '@/app/home/top';
-// import { PATH_PREFIX } from '@/env';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import Banner from './banner';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     background: `url('${PATH_PREFIX}/static/banner/1.png') no-repeat center`,
-//     backgroundSize: 'cover',
-//     color: theme.palette.common.white,
-//     width: '100%',
-//     // paddingTop: theme.spacing(4),
-//     // display: 'flex',
-//     // justifyContent: 'space-between',
-//     height: '100vh'
-//   },
-// }));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    color: theme.palette.common.white,
+    width: 'calc(100% - 60px)',
+    marginLeft: '30px',
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    textAlign: 'left',
+  },
+}));
 
 export default () => {
+  const classes = useStyles();
 
   return (
-    <Banner no={1}/>
+    <Banner>
+      <div className={classes.root}>
+        <Grid container spacing={10}>
+          <Grid item xs={12}>
+            <Typography variant={"h5"}>keystore</Typography>
+            <Typography variant={"h4"}>诚邀您出席</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant={"h5"}>2020.8.14-8.16</Typography>
+            <Typography variant={"h5"}>2020第三届深圳</Typography>
+            <Typography variant={"h4"}>分布式存储行业大会</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant={"h5"}>展位号</Typography>
+            <Typography variant={"h4"}>6A15B</Typography>
+          </Grid>
+        </Grid>
+      </div>
+    </Banner>
   );
 };

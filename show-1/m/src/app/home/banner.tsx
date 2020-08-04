@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 // import Typography from '@material-ui/core/Typography';
 // import Top from '@/app/home/top';
 import { PATH_PREFIX } from '@/env';
-import Arrow from './arrow';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
   // }
 }));
 
-export default ({no, arrow=true, children}: any) => {
+export default ({children}: any) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} style={{backgroundImage: `url('${PATH_PREFIX}/static/banner/bg.png')`}}>
+    <div className={classes.root} style={{backgroundImage: `url('${PATH_PREFIX}/static/home/bg.png')`}}>
       {/* <div className={classes.titleCon}>
         <Typography variant={"body2"} align={"left"} className={classes.title1}>KeyPool: Get </Typography>
         <Typography variant={"body2"} align={"left"} className={classes.title1}>Filecoin with Ease</Typography>
@@ -49,7 +48,6 @@ export default ({no, arrow=true, children}: any) => {
       <img src={`${PATH_PREFIX}/static/home/1-5.png`} className={classes.img} /> */}
       {/* <Music/> */}
       {children}
-      {arrow && <Arrow/>}
     </div>
   );
 };
