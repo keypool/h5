@@ -3,3 +3,4 @@
 
 
 declare const BMapGL: any;
+declare const BMap: any;
