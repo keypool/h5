@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { PATH_PREFIX } from '@/env';
 import WebglInteractivePoints from '@/components/three/webgl-interactive-points';
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +27,7 @@ export default ({children}: any) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} style={{backgroundImage: `url('${PATH_PREFIX}/static/home/bg.png')`}}>
+    <div className={classes.root}>
       <WebglInteractivePoints/>
       <div className={classes.container}>
         {children}

@@ -48,9 +48,7 @@ export default () => {
     <Banner>
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <ViewGrow>
-            <Title text={'展会信息'}/>
-          </ViewGrow>
+          <Title text={'展会信息'}/>
         </Grid>
         <Grid container item xs={12}>
           <ViewGrow>
