@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { PATH_PREFIX } from '@/env';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import MusicOffIcon from '@material-ui/icons/MusicOff';
 import clsx from 'clsx';
@@ -16,8 +15,8 @@ const useStyles = makeStyles(() => ({
     transform: 'rotate(270deg)',
     position: 'fixed',
     zIndex: 4,
-    right: 30,
-    top: 50,
+    right: 20,
+    top: 20,
     width: 30,
     height: 30,
     animation: "$arrow 1.5s linear infinite",
@@ -71,7 +70,8 @@ export default () => {
     <>
       <MusicNoteIcon className={clsx({[classes.icon]: listen, [classes.hide]: !listen})} onClick={handleChangeListen}/>
       <MusicOffIcon className={clsx({[classes.icon]: !listen, [classes.hide]: listen})} onClick={handleChangeListen}/>
-      <audio ref={auditRef} controls src={`${PATH_PREFIX}/static/home/music1.mp3`} hidden/>
+      {/* <audio ref={auditRef} controls src={`${PATH_PREFIX}/static/home/music1.mp3`} hidden/> */}
+      <audio ref={auditRef} controls src={`https://oss.faycz.com/keypool/music/star-wars.mp3`} hidden/>
     </>
   );
 };

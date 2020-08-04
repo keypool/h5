@@ -41,12 +41,6 @@ const theme = createMuiTheme({
         }
       }
     },
-    MuiButton: {
-      root: {
-        textTransform: "inherit",
-        borderRadius: 24
-      }
-    }
   }
 });
 
