@@ -3,20 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Banner from './banner';
+import Title from './title';
 import { PATH_PREFIX } from '@/env';
+import ViewGrow from '@/components/view-grow';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    color: theme.palette.common.white,
-    width: 'calc(100% - 40px)',
-    marginLeft: '20px',
-    display: 'flex',
-    alignItems: 'center',
-    height: '100%',
-    textAlign: 'left',
-  },
+const useStyles = makeStyles(() => ({
   desc: {
-    fontSize: '0.75rem'
+    fontSize: '0.75rem',
+    fontWeight: 'bold'
   }
 }));
 
@@ -25,37 +19,36 @@ export default () => {
 
   return (
     <Banner>
-      <div className={classes.root}>
-        <Grid container spacing={4}>
-          <Grid item xs={12}>
-            <Typography variant={"h4"}>参展内容</Typography>
-          </Grid>
-          <Grid container item xs={12}>
-            <Typography variant={"h5"}>Filecoin矿池安全解决方案</Typography>
-            <Typography variant={"h5"}>Keystore网银系统</Typography>
-          </Grid>
-          <Grid container item xs={12} spacing={1}>
-            <Grid container item xs={3} justify="center" alignItems="flex-start">
-              <img width={'100%'} src={`${PATH_PREFIX}/static/home/keypool.jpg`}/>
-            </Grid>
-            <Grid container item xs={9} justify="center" alignItems="center">
-              <Typography>
-                安全、便捷、专业的加密资产管理系统
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid container item xs={12} spacing={1}>
-            <Grid container item xs={9} justify="center" alignItems="center">
-              <Typography>
-                KEYSTORE为您解决加密货币存管安全以及财务审计问题
-              </Typography>
-            </Grid>
-            <Grid container item xs={3} justify="center" alignItems="flex-start">
-              <img width={'100%'} src={`${PATH_PREFIX}/static/home/keystore.jpg`}/>
-            </Grid>
-          </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+          <Title text={'参展内容 - 2'}/>
+          <Typography className={classes.desc} style={{marginTop: '20px'}}>KeyPool - 矿池品牌</Typography>
+          <Typography className={classes.desc}>高效集群方案：CPU服务器 x GPU服务器 x 存储柜</Typography>
         </Grid>
-      </div>
+        <Grid container item xs={12} justify="center" alignItems="flex-start">
+          <ViewGrow>
+            <img width={'100%'} src={`${PATH_PREFIX}/static/home/kp_product.jpg`}/>
+          </ViewGrow>
+        </Grid>
+        <Grid item xs={12}>
+          <ViewGrow>
+            <>
+              <Typography className={classes.desc}>
+                方案特点
+              </Typography>
+              <Typography className={classes.desc}>
+                - 扩展成本低至 500 RMB/T，成本节省 75%
+              </Typography>
+              <Typography className={classes.desc}>
+                - T4机房成本价托管，运维费用 10000 RMB/年
+              </Typography>
+              <Typography className={classes.desc}>
+                - 弹性配置，应对算法调整能力强，调整无忧
+              </Typography>
+            </>
+          </ViewGrow>
+        </Grid>
+      </Grid>
     </Banner>
   );
 };

@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     },
     "30%": {
       bottom: 20,
-      opacity: "0.9",
+      opacity: "1",
     },
     "100%": {
       bottom: 40,

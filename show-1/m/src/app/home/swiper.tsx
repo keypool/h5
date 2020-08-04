@@ -10,7 +10,6 @@ import Music from './music';
 import Arrow from './arrow';
 
 const banners = [
-  // Banner5,
   Banner1,
   Banner2,
   Banner3,
@@ -27,6 +26,7 @@ export default () => {
   return (
     <>
       <Swiper
+        speed={1000}
         loop
         effect="fade"
         direction={"vertical"}

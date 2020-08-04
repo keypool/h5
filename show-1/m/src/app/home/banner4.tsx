@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Banner from './banner';
+import Title from './title';
 import { PATH_PREFIX } from '@/env';
+import ViewGrow from '@/components/view-grow';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
   },
   desc: {
-    fontSize: '0.75rem'
+    fontSize: '0.75rem',
+    fontWeight: 'bold',
   }
 }));
 
@@ -25,40 +28,67 @@ export default () => {
 
   return (
     <Banner>
-      <div className={classes.root}>
-        <Grid container spacing={4}>
+      <Grid container spacing={4}>
+        <Grid container item xs={12} spacing={1}>
           <Grid item xs={12}>
-            <Typography variant={"h4"}>参展内容</Typography>
+            <Title text={'关于KeyPool'}/>
           </Grid>
-          <Grid container item xs={12}>
-            <Typography variant={"h5"}>Filecoin矿池安全解决方案</Typography>
-            <Typography variant={"h5"}>Keystore网银系统</Typography>
-          </Grid>
-          <Grid container item xs={12} justify="center" alignItems="flex-start">
-            <img width={'100%'} src={`${PATH_PREFIX}/static/home/kp_product.jpg`}/>
-          </Grid>
-          <Grid container item xs={12} spacing={1}>
-            <Typography variant={'body2'}>
-              1. 全新配置，AMD Infinity架构
-            </Typography>
-            <Typography variant={'body2'}>
-              2. 企业级硬盘，Intel Optane SSD
-            </Typography>
-            <Typography variant={'body2'}>
-              3. KeyPool定制加速硬件，急速提升时空证明速度
-            </Typography>
-            <Typography variant={'body2'}>
-              4. 扩展成本低至500RMB/T，效率不变，成本节省75%
-            </Typography>
-            <Typography variant={'body2'}>
-              5. T4机房成本价托管，运维费用10000 RMB/年
-            </Typography>
-            <Typography variant={'body2'}>
-              6. 弹性配置，应对算法调整能力强，调整无忧
-            </Typography>
+          <Grid item xs={12}>
+            <ViewGrow>
+              <Typography className={classes.desc}>
+                KeyPool是Keystore旗下的基于Filecoin网络的技
+                术服务平台，创造团队来自Intel，分布式资本，奇虎
+                360等企业，拥有丰富的加密资产管理，数据存储，
+                企业SaaS服务经验，是Filecoin生态的重要成员。
+                KeyPool团队基于Filecoin进行了深入的算法优化，
+                由内部研发团队自主设计研发的集群化架构方案，显
+                著提升了挖矿性能及出块效率。
+              </Typography>
+            </ViewGrow>
           </Grid>
         </Grid>
-      </div>
+        <Grid container item xs={12} spacing={1}>
+          <Grid item xs={12}>
+            <Title text={'关于Keystore'}/>
+          </Grid>
+          <Grid item xs={12}>
+            <ViewGrow>
+              <Typography className={classes.desc}>
+                Keystore Group是亚太地区领先的加密资产服务
+                商，为机构客户提供银行级别的资产安全存管和网
+                银支付服务，客户涵盖了知名机构，交易所，项目
+                方，比特币矿工等。旗下产品包括Keystore Internet Banking、KeystoreCustody、KeyPool、KeyPay等。
+                2020年1月，Keystore获得了建元基金和分布式
+                资本的投资，正式成为业内唯一国资背景的企业级加密资产服务商。
+              </Typography>
+            </ViewGrow>
+          </Grid>
+        </Grid>
+        <Grid container item xs={12} spacing={1}>
+          <Grid container item xs={3} justify="center" alignItems="flex-start">
+            <ViewGrow>
+              <img width={'100%'} src={`${PATH_PREFIX}/static/home/keystore.jpg`}/>
+            </ViewGrow>
+          </Grid>
+          <Grid container item xs={3} justify="center" alignItems="flex-start">
+            <ViewGrow>
+              <img width={'100%'} src={`${PATH_PREFIX}/static/home/keypool.jpg`}/>
+            </ViewGrow>
+          </Grid>
+          <Grid container item xs={6} justify="center" alignItems="flex-start">
+            <ViewGrow>
+              <div>
+                <Typography>
+                  www.keypool.com
+                </Typography>
+                <Typography>
+                  www.keystore.com
+                </Typography>
+              </div>
+            </ViewGrow>
+          </Grid>
+        </Grid>
+      </Grid>
     </Banner>
   );
 };
