@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import ViewGrow from '@/components/view-grow';
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -21,10 +22,12 @@ export default ({text}: any) => {
 
   return (
     <div>
-      <Typography className={classes.text}>
-        {text}
-        <Divider className={classes.divider}/>
-      </Typography>
+      <ViewGrow>
+        <Typography className={classes.text}>
+          {text}
+          <Divider className={classes.divider}/>
+        </Typography>
+      </ViewGrow>
     </div>
   );
 };
