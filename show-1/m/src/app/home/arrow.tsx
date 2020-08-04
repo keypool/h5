@@ -3,14 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 const useStyles = makeStyles(() => ({
-  root: {
-    
-  },
   icon: {
+    zIndex: 8,
+    color: '#fff',
     transform: 'rotate(270deg)',
-    position: 'absolute',
+    position: 'fixed',
     width: '100%',
-    // bottom: 10,
     animation: "$arrow 1.5s ease infinite",
   },
   "@keyframes arrow": {
@@ -20,7 +18,7 @@ const useStyles = makeStyles(() => ({
     },
     "30%": {
       bottom: 20,
-      opacity: "1",
+      opacity: "0.9",
     },
     "100%": {
       bottom: 40,
@@ -33,8 +31,6 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <DoubleArrowIcon className={classes.icon}/>
-    </div>
+    <DoubleArrowIcon className={classes.icon}/>
   );
 };

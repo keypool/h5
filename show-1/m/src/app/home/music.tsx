@@ -17,7 +17,9 @@ const useStyles = makeStyles(() => ({
     position: 'fixed',
     zIndex: 4,
     right: 30,
-    top: 30,
+    top: 50,
+    width: 30,
+    height: 30,
     animation: "$arrow 1.5s linear infinite",
   },
   "@keyframes arrow": {
