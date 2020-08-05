@@ -10,6 +10,7 @@ import Music from './music';
 import Arrow from './arrow';
 
 const banners = [
+  Banner5,
   Banner1,
   Banner2,
   Banner3,

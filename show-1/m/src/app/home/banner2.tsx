@@ -32,8 +32,8 @@ export default () => {
             <Grid container item xs={4} justify="center" alignItems="center">
               <ViewGrow>
                 <div style={{position: 'absolute', right: 0}}>
-                  <Typography variant={"h6"}>加密资产网银系统</Typography>
-                  <Typography variant={"body1"} style={{fontWeight: 'bold'}}>Corporate Internet Banking</Typography>
+                  <Typography>加密资产网银系统</Typography>
+                  <Typography style={{fontSize: '0.75rem'}}>Corporate Internet Banking</Typography>
                 </div>
               </ViewGrow>
             </Grid>
@@ -42,8 +42,8 @@ export default () => {
             <Grid container item xs={4} justify="center" alignItems="center">
               <ViewGrow>
                 <div style={{position: 'absolute', left: 0}}>
-                  <Typography variant={"h6"}>加密资产托管服务</Typography>
-                  <Typography variant={"h6"} style={{fontWeight: 'bold'}}>Custody Service</Typography>
+                  <Typography>加密资产托管服务</Typography>
+                  <Typography style={{fontSize: '0.75rem'}}>Custody Service</Typography>
                 </div>
               </ViewGrow>
             </Grid>
