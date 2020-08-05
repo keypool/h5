@@ -1,6 +1,7 @@
 import React from 'react';
 // import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Banner from './banner';
@@ -18,16 +19,18 @@ export default () => {
     <Banner>
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <ViewGrow>
-            <img width={'100%'} src={'https://oss.faycz.com/keypool/kps1m/1.png'}/>
-          </ViewGrow>
-        </Grid>
-        <Grid item xs={12} style={{textAlign: "center"}}>
-          <ViewGrow>
-            <img width={'80%'} src={'https://oss.faycz.com/keypool/kps1m/2.png'}/>
-          </ViewGrow>
-        </Grid>
-        <Grid item xs={12}>
+          <Grid item xs={12}>
+            <ViewGrow>
+              <img width={'100%'} src={'https://oss.faycz.com/keypool/kps1m/1.png'}/>
+            </ViewGrow>
+          </Grid>
+          <Grid item xs={12}>
+            <ViewGrow>
+              <Box textAlign={'center'} mt={4} mb={2}>
+                <img width={'80%'} src={'https://oss.faycz.com/keypool/kps1m/2.png'}/>
+              </Box>
+            </ViewGrow>
+          </Grid>
           <Grid container item xs={12}>
             <Grid container item xs={7} justify="center" alignItems="center">
               <ViewGrow>
@@ -41,7 +44,13 @@ export default () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12} style={{textAlign: "center"}}>
+          
+        </Grid> */}
+        {/* <Grid item xs={12}>
+          
+        </Grid> */}
+        <Grid container item xs={12} alignItems={"flex-end"}>
           <Grid container item xs={12} spacing={1}>
             <Grid item xs={12}>
               <ViewGrow>

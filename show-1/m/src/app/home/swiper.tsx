@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, {EffectFade} from 'swiper';
+import SwiperCore, {EffectCoverflow} from 'swiper';
 import Banner1 from './banner1';
 import Banner2 from './banner2';
 import Banner3 from './banner3';
@@ -17,7 +17,8 @@ const banners = [
   Banner5
 ];
 
-SwiperCore.use([EffectFade]);
+// SwiperCore.use([EffectFade]);
+SwiperCore.use([EffectCoverflow]);
 
 export default () => {
 
@@ -26,9 +27,19 @@ export default () => {
   return (
     <>
       <Swiper
-        speed={1000}
+        speed={2000}
         loop
-        effect="fade"
+        // effect="fade"
+        effect="coverflow"
+        grabCursor
+        centeredSlides
+        coverflowEffect={{
+          rotate: 150,
+          stretch: 0,
+          depth: 50,
+          modifier: 1,
+          slideShadows: true,
+        }}
         direction={"vertical"}
         slidesPerView={1}
         onSlideChange={(e) => console.log('slide change', e)}

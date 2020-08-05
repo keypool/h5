@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Banner from './banner';
 import Title from './title';
-import { PATH_PREFIX } from '@/env';
 import ViewGrow from '@/components/view-grow';
 
 // const useStyles = makeStyles((theme) => ({
@@ -21,13 +20,13 @@ export default () => {
         <Grid container>
           <Grid item xs={12}>
             <Title text={'参展内容 - 1'}/>
-            <Typography variant={"body1"} style={{marginTop: '20px'}}>Keystore企业级加密资产服务商</Typography>
-            <Typography variant={"body1"}>安全、高效、专业</Typography>
+            <Typography variant={"body2"} style={{marginTop: '20px'}}>Keystore企业级加密资产服务商</Typography>
+            <Typography variant={"body2"}>安全、高效、专业</Typography>
           </Grid>
           <Grid container item xs={12} spacing={1}>
             <Grid container item xs={8} justify="flex-start" alignItems="center">
               <ViewGrow>
-                <img width={'60%'} src={`${PATH_PREFIX}/static/home/keystore.jpg`}/>
+                <img width={'60%'} src={`https://oss.faycz.com/keypool/kps1m/product-1.png`}/>
               </ViewGrow>
             </Grid>
             <Grid container item xs={4} justify="center" alignItems="center">
@@ -50,7 +49,7 @@ export default () => {
             </Grid>
             <Grid container item xs={8} justify="flex-end" alignItems="center">
               <ViewGrow>
-                <img width={'60%'} src={`${PATH_PREFIX}/static/home/keystore.jpg`}/>
+                <img width={'60%'} src={`https://oss.faycz.com/keypool/kps1m/product-2.png`}/>
               </ViewGrow>
             </Grid>
           </Grid>
