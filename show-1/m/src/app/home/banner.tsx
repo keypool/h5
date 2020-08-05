@@ -23,12 +23,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default ({children}: any) => {
+export default ({no, children}: any) => {
   const classes = useStyles();
-
+  console.log(no);
   return (
     <div className={classes.root}>
-      <WebglInteractivePoints/>
+      <WebglInteractivePoints
+      //  positionX={no===1?100:undefined}
+      //  positionY={no===5?-50:undefined}
+      //  positionZ={no===5?900:undefined}
+      />
       <div className={classes.container}>
         {children}
       </div>

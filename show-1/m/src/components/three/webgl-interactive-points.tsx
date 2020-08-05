@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-export default ({className}: any) => { 
+export default ({className, positionX = 0, positionY = 0, positionZ = 700}: any) => { 
   const classes = useStyles();
   const ref = React.createRef<any>();
 
@@ -40,7 +40,7 @@ export default ({className}: any) => {
     const init = () => {
 
       camera = new THREE.PerspectiveCamera( 45, container.clientWidth / container.clientHeight, 1, 10000 );
-      camera.position.set( 0, 0, 700 );
+      camera.position.set( positionX, positionY, positionZ );
       // camera.position.z = 400;
       // camera.position.y = -150;
       scene = new THREE.Scene();
