@@ -18,7 +18,7 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <Banner>
+    <Banner no={3}>
       <Grid container>
         <Grid item xs={12}>
           <Title text={'参展内容 - 2'}/>

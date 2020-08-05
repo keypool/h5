@@ -16,7 +16,7 @@ export default () => {
   // const classes = useStyles();
 
   return (
-    <Banner>
+    <Banner no={1}>
       <Grid container spacing={0}>
         <Grid item xs={12}>
           <Grid item xs={12}>
