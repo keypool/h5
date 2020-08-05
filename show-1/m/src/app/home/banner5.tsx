@@ -69,7 +69,7 @@ export default () => {
         </Grid> */}
         <Grid container item xs={12} alignItems={"center"}>
           <ViewGrow>
-            <img width={'100%'} src={'https://oss.faycz.com/keypool/kps1m/show-1.png'}/>
+            <img width={'100%'} src={'https://oss.faycz.com/keypool/kps1m/show-2.jpg'}/>
           </ViewGrow>
         </Grid>
       </Grid>
