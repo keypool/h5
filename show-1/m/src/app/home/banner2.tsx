@@ -42,7 +42,7 @@ export default () => {
             <Grid container item xs={4} justify="center" alignItems="center">
               <ViewGrow>
                 <div style={{position: 'absolute', left: 0}}>
-                  <Typography>加密资产托管服务</Typography>
+                  <Typography>加密资产存管服务</Typography>
                   <Typography style={{fontSize: '0.75rem'}}>Custody Service</Typography>
                 </div>
               </ViewGrow>
