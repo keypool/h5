@@ -23,7 +23,7 @@ export default () => {
             <Typography variant={"body2"} style={{marginTop: '20px'}}>Keystore企业级加密资产服务商</Typography>
             <Typography variant={"body2"}>安全、高效、专业</Typography>
           </Grid>
-          <Grid container item xs={12} spacing={1}>
+          <Grid container item xs={12} spacing={1} style={{height: 140}}>
             <Grid container item xs={8} justify="flex-start" alignItems="center">
               <ViewGrow>
                 <img width={'60%'} src={`https://oss.faycz.com/keypool/kps1m/product-1.png`}/>
@@ -38,7 +38,7 @@ export default () => {
               </ViewGrow>
             </Grid>
           </Grid>
-          <Grid container item xs={12} spacing={1}>
+          <Grid container item xs={12} spacing={1} style={{height: 140}}>
             <Grid container item xs={4} justify="center" alignItems="center">
               <ViewGrow>
                 <div style={{position: 'absolute', left: 0}}>

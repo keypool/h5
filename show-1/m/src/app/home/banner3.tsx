@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import Banner from './banner';
 import Title from './title';
 import { PATH_PREFIX } from '@/env';
@@ -33,9 +34,11 @@ export default () => {
         <Grid item xs={12}>
           <ViewGrow>
             <>
-              <Typography className={classes.desc}>
-                方案特点
-              </Typography>
+              <Box mb={1.5}>
+                <Typography>
+                  方案特点
+                </Typography>
+              </Box>
               <Typography className={classes.desc}>
                 - 扩展成本低至 500 RMB/T，成本节省 75%
               </Typography>
