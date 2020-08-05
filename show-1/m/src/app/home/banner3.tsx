@@ -9,8 +9,8 @@ import ViewGrow from '@/components/view-grow';
 
 const useStyles = makeStyles(() => ({
   desc: {
-    fontSize: '0.75rem',
-    fontWeight: 'bold'
+    fontSize: '0.875rem',
+    // fontWeight: 'bold'
   }
 }));
 
@@ -22,8 +22,8 @@ export default () => {
       <Grid container>
         <Grid item xs={12}>
           <Title text={'参展内容 - 2'}/>
-          <Typography className={classes.desc} style={{marginTop: '20px'}}>KeyPool - 矿池品牌</Typography>
-          <Typography className={classes.desc}>高效集群方案：CPU服务器 x GPU服务器 x 存储柜</Typography>
+          <Typography variant={"body2"} style={{marginTop: '20px'}}>KeyPool - 矿池品牌</Typography>
+          <Typography variant={"body2"}>高效集群方案：CPU服务器 x GPU服务器 x 存储柜</Typography>
         </Grid>
         <Grid container item xs={12} justify="center" alignItems="flex-start">
           <ViewGrow>

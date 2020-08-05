@@ -49,13 +49,11 @@ export default () => {
       <Grid container spacing={0}>
         <Grid item xs={12}>
           <Title text={'展会信息'}/>
-        </Grid>
-        <Grid container item xs={12}>
           <ViewGrow>
-            <div>
-              <Typography variant={"body2"}>时间：2020年8月14日 - 16日</Typography>
-              <Typography variant={"body2"}>地点：深圳会展中心 6号馆</Typography>
-            </div>
+            <Typography variant={"body2"} style={{marginTop: '20px'}}>时间：2020年8月14日 - 16日</Typography>
+          </ViewGrow>
+          <ViewGrow>
+            <Typography variant={"body2"}>地点：深圳会展中心 6号馆</Typography>
           </ViewGrow>
         </Grid>
         <Grid item xs={12} style={{textAlign: "center"}}>
