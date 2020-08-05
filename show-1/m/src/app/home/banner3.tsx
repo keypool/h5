@@ -40,13 +40,13 @@ export default () => {
                 </Typography>
               </Box>
               <Typography className={classes.desc}>
-                - 扩展成本低至 500 RMB/T，成本节省 75%
+                - 规模效应优势强，成本更低
               </Typography>
               <Typography className={classes.desc}>
-                - T4机房成本价托管，运维费用 10000 RMB/年
+                - 弹性配置，最大化利用计算资源，加快算力部署
               </Typography>
               <Typography className={classes.desc}>
-                - 弹性配置，应对算法调整能力强，调整无忧
+                - 机房电力和网络资源稳定保障挖矿收益和存储服务
               </Typography>
             </>
           </ViewGrow>
