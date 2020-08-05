@@ -7,7 +7,7 @@ import ViewGrow from '@/components/view-grow';
 const useStyles = makeStyles((theme) => ({
   text: {
     display: 'inline-block',
-    fontSize: '1.8rem',
+    fontSize: '1.25rem',
     fontWeight: 'bold',
   },
   divider: {

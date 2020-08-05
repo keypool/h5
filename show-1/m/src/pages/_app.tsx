@@ -25,7 +25,7 @@ export default function MyApp(props: Props) {
   return (
     <React.Fragment>
       <Head>
-        <title>KeyPool: Get Filecoin with Ease</title>
+        <title>KeyPool诚邀您参加2020深圳分布式存储行业大会</title>
         <meta name="keywords" content="KeyPool,云算力,filecoin,ipfs,filecoin挖矿,区块链,云存储,云计算,去中心化,方块云存储,资产存管"/>
         <meta name="description" content="KeyPool是Keystore旗下的基于Filecoin网络的技术服务平台,由资深区块链研发工程师，边缘计算及分布式存储专家倾力打造，创始团队来自Intel,分布式资本，奇虎360等企业"/>
         {/* <link rel="canonical" href="https://www.faycz.com" /> */}

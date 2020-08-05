@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Banner from './banner';
@@ -7,24 +7,20 @@ import Title from './title';
 import { PATH_PREFIX } from '@/env';
 import ViewGrow from '@/components/view-grow';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    color: theme.palette.common.white,
-    width: 'calc(100% - 40px)',
-    marginLeft: '20px',
-    display: 'flex',
-    alignItems: 'center',
-    height: '100%',
-    textAlign: 'left',
-  },
-  desc: {
-    fontSize: '0.75rem',
-    fontWeight: 'bold',
-  }
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     color: theme.palette.common.white,
+//     width: 'calc(100% - 40px)',
+//     marginLeft: '20px',
+//     display: 'flex',
+//     alignItems: 'center',
+//     height: '100%',
+//     textAlign: 'left',
+//   },
+// }));
 
 export default () => {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <Banner no={4}>
@@ -35,7 +31,7 @@ export default () => {
           </Grid>
           <Grid item xs={12}>
             <ViewGrow>
-              <Typography className={classes.desc}>
+              <Typography variant={'body2'}>
                 KeyPool是Keystore旗下的基于Filecoin网络的技
                 术服务平台，创造团队来自Intel，分布式资本，奇虎
                 360等企业，拥有丰富的加密资产管理，数据存储，
@@ -53,7 +49,7 @@ export default () => {
           </Grid>
           <Grid item xs={12}>
             <ViewGrow>
-              <Typography className={classes.desc}>
+              <Typography variant={'body2'}>
                 Keystore Group是亚太地区领先的加密资产服务
                 商，为机构客户提供银行级别的资产安全存管和网
                 银支付服务，客户涵盖了知名机构，交易所，项目
@@ -78,10 +74,10 @@ export default () => {
           <Grid container item xs={6} justify="center" alignItems="flex-start">
             <ViewGrow>
               <div>
-                <Typography>
+                <Typography variant={'body2'}>
                   www.keypool.com
                 </Typography>
-                <Typography>
+                <Typography variant={'body2'}>
                   www.keystore.com
                 </Typography>
               </div>
