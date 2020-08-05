@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import Banner from './banner';
 import Title from './title';
 import ViewGrow from '@/components/view-grow';
@@ -61,34 +62,37 @@ export default () => {
           <ViewGrow>
             <Typography variant={"body2"} style={{marginTop: '20px'}}>时间：2020年8月14日 - 16日</Typography>
           </ViewGrow>
-        </Grid>
-        <Grid container item xs={12} alignItems={"center"}>
           <ViewGrow>
-            <img width={'100%'} src={'https://oss.faycz.com/keypool/kps1m/show-2.jpg'}/>
+            <Box mt={4}>
+              <img width={'100%'} src={'https://oss.faycz.com/keypool/kps1m/show-2.jpg'}/>
+            </Box>
           </ViewGrow>
-        </Grid>
-        <Grid container item xs={12} spacing={1}>
-          <Grid container item xs={5} alignItems={"center"}>
-            <ViewGrow>
-              <div className={classes.mapWrapper}>
-                <div ref={mapRef} className={classes.map}></div>
+          <Box mt={5}>
+          <Grid container item xs={12} spacing={1}>
+            <Grid container item xs={5} alignItems={"center"}>
+              <ViewGrow>
+                <div className={classes.mapWrapper}>
+                  <div ref={mapRef} className={classes.map}></div>
+                </div>
+              </ViewGrow>
+            </Grid>
+            <Grid item xs={1}></Grid>
+            <Grid container item xs={6} alignItems={"center"}>
+              <div>
+                <ViewGrow>
+                  <Typography variant={"body2"}>深圳会展中心 6号馆</Typography>
+                </ViewGrow>
+                <ViewGrow>
+                  <Typography className={classes.desc}>展览馆 深圳市-福田区-福田街道福安社区福华...</Typography>
+                </ViewGrow>
+                <ViewGrow>
+                  <a className={classes.link} onClick={() => window.open(mapUrl)}>去这里 &gt;</a>
+                </ViewGrow>
               </div>
-            </ViewGrow>
+            </Grid>
           </Grid>
-          <Grid item xs={1}></Grid>
-          <Grid container item xs={6} alignItems={"center"}>
-            <div>
-              <ViewGrow>
-                <Typography variant={"body2"}>深圳会展中心 6号馆</Typography>
-              </ViewGrow>
-              <ViewGrow>
-                <Typography className={classes.desc}>展览馆 深圳市-福田区-福田街道福安社区福华...</Typography>
-              </ViewGrow>
-              <ViewGrow>
-                <a className={classes.link} onClick={() => window.open(mapUrl)}>去这里 &gt;</a>
-              </ViewGrow>
-            </div>
-          </Grid>
+          </Box>
+          
         </Grid>
       </Grid>
     </Banner>
