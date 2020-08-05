@@ -71,7 +71,7 @@ export default () => {
       <MusicNoteIcon className={clsx({[classes.icon]: listen, [classes.hide]: !listen})} onClick={handleChangeListen}/>
       <MusicOffIcon className={clsx({[classes.icon]: !listen, [classes.hide]: listen})} onClick={handleChangeListen}/>
       {/* <audio ref={auditRef} controls src={`${PATH_PREFIX}/static/home/music1.mp3`} hidden/> */}
-      <audio ref={auditRef} controls src={`https://oss.faycz.com/keypool/music/star-wars.mp3`} hidden/>
+      <audio ref={auditRef} controls src={`https://oss.faycz.com/keypool/music/MitiS-Endeavors.mp3`} hidden/>
     </>
   );
 };
