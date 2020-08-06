@@ -6,10 +6,14 @@ import Banner from './banner';
 import Title from './title';
 import { PATH_PREFIX } from '@/env';
 import ViewGrow from '@/components/view-grow';
+import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
+import PhonelinkRingIcon from '@material-ui/icons/PhonelinkRing';
 
 const useStyles = makeStyles(() => ({
   desc: {
-    fontSize: '0.75rem'
+    fontSize: '0.75rem',
+    display: 'flex',
+    alignItems: 'center'
   },
 }));
 
@@ -48,9 +52,9 @@ export default () => {
           <Grid container item xs={6} justify="center" alignItems="center">
             <ViewGrow>
               <div>
-                <Typography className={classes.desc}>
+                {/* <Typography className={classes.desc}>
                   了解更多业务，请联系我们
-                </Typography>
+                </Typography> */}
                 <Typography className={classes.desc}>
                   www.keystore.com
                 </Typography>
@@ -58,10 +62,10 @@ export default () => {
                   www.keypool.com
                 </Typography>
                 <Typography className={classes.desc}>
-                  官方电话：400 820 3960
+                  <PhoneForwardedIcon style={{width: '0.75rem', height: '0.75rem'}}/>&nbsp;400 820 3960
                 </Typography>
                 <Typography className={classes.desc}>
-                  BD合作：131 6284 7705
+                  <PhonelinkRingIcon style={{width: '0.75rem', height: '0.75rem'}}/>&nbsp;131 6284 7705
                 </Typography>
               </div>
             </ViewGrow>
