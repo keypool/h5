@@ -1,5 +1,5 @@
 import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Banner from './banner';
@@ -7,44 +7,31 @@ import Title from './title';
 import { PATH_PREFIX } from '@/env';
 import ViewGrow from '@/components/view-grow';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     color: theme.palette.common.white,
-//     width: 'calc(100% - 40px)',
-//     marginLeft: '20px',
-//     display: 'flex',
-//     alignItems: 'center',
-//     height: '100%',
-//     textAlign: 'left',
-//   },
-// }));
+const useStyles = makeStyles(() => ({
+  desc: {
+    fontSize: '0.75rem'
+  },
+}));
 
 export default () => {
-  // const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <Banner no={4}>
       <Grid container spacing={4}>
         <Grid container item xs={12} spacing={1}>
           <Grid item xs={12}>
-            <Title text={'关于KeyPool'}/>
+            <Title text={'关于我们'}/>
           </Grid>
           <Grid item xs={12}>
             <ViewGrow>
               <Typography variant={'body2'}>
-                KeyPool是Keystore旗下的基于Filecoin网络的技术服务平台，创造团队来自Intel，分布式资本，奇虎360等企业，拥有丰富的加密资产管理，数据存储，企业SaaS服务经验，是Filecoin生态的重要成员。KeyPool团队基于Filecoin进行了深入的算法优化，由内部研发团队自主设计研发的集群化架构方案，显著提升了挖矿性能及出块效率。
+                Keystore Group是亚太地区领先的加密资产服务商，为机构客户提供银行级别的资产安全存管和网银支付服务。旗下产品包括Keystore Enterprise、Keystore Custody、KeyPool等。2020年1月，Keystore获得了建元基金和分布式资本的投资，正式成为业内唯一国资背景的企业级加密资产服务商。
               </Typography>
             </ViewGrow>
-          </Grid>
-        </Grid>
-        <Grid container item xs={12} spacing={1}>
-          <Grid item xs={12}>
-            <Title text={'关于Keystore'}/>
-          </Grid>
-          <Grid item xs={12}>
             <ViewGrow>
-              <Typography variant={'body2'}>
-                Keystore Group是亚太地区领先的加密资产服务商，为机构客户提供银行级别的资产安全存管和网银支付服务，客户涵盖了知名机构，交易所，项目方，比特币矿工等。旗下产品包括Keystore Enterprise、Keystore Custody、KeyPool等。2020年1月，Keystore获得了建元基金和分布式资本的投资，正式成为业内唯一国资背景的企业级加密资产服务商。
+              <Typography variant={'body2'} style={{marginTop: '20px'}}>
+                KeyPool是Keystore旗下的基于Filecoin网络的技术服务平台，创始团队来自Intel，分布式资本，奇虎360等企业，拥有丰富的加密资产管理，数据存储，企业SaaS服务经验，是Filecoin生态的重要成员。KeyPool团队基于Filecoin进行了深入的算法优化，由内部研发团队自主设计研发的集群化架构方案，显著提升了挖矿性能及出块效率。
               </Typography>
             </ViewGrow>
           </Grid>
@@ -63,11 +50,20 @@ export default () => {
           <Grid container item xs={6} justify="center" alignItems="flex-start">
             <ViewGrow>
               <div>
-                <Typography variant={'body2'}>
+                <Typography className={classes.desc}>
+                  了解更多业务，请联系我们
+                </Typography>
+                <Typography className={classes.desc}>
+                  www.keystore.com
+                </Typography>
+                <Typography className={classes.desc}>
                   www.keypool.com
                 </Typography>
-                <Typography variant={'body2'}>
-                  www.keystore.com
+                <Typography className={classes.desc}>
+                  官方电话：400 820 3960
+                </Typography>
+                <Typography className={classes.desc}>
+                  BD合作：131 6284 7705
                 </Typography>
               </div>
             </ViewGrow>
