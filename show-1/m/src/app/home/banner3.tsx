@@ -23,8 +23,8 @@ export default () => {
       <Grid container>
         <Grid item xs={12}>
           <Title text={'KeyPool'}/>
-          <Typography variant={"body2"} style={{marginTop: '20px'}}>矿池品牌</Typography>
-          <Typography variant={"body2"}>高效集群方案：CPU服务器 x GPU服务器 x 存储柜</Typography>
+          <Typography style={{marginTop: '20px'}}>矿池品牌</Typography>
+          <Typography style={{marginTop: '8px'}} variant={"body2"}>高效集群方案：CPU服务器 x GPU服务器 x 存储柜</Typography>
         </Grid>
         <Grid container item xs={12} justify="center" alignItems="flex-start">
           <ViewGrow>

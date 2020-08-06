@@ -35,19 +35,17 @@ export default () => {
               </Typography>
             </ViewGrow>
           </Grid>
-        </Grid>
-        <Grid container item xs={12} spacing={1}>
-          <Grid container item xs={3} justify="center" alignItems="flex-start">
+          <Grid container item xs={3} justify="center" alignItems="center">
             <ViewGrow>
               <img width={'100%'} src={`${PATH_PREFIX}/static/home/keystore.jpg`}/>
             </ViewGrow>
           </Grid>
-          <Grid container item xs={3} justify="center" alignItems="flex-start">
+          <Grid container item xs={3} justify="center" alignItems="center">
             <ViewGrow>
               <img width={'100%'} src={`${PATH_PREFIX}/static/home/keypool.jpg`}/>
             </ViewGrow>
           </Grid>
-          <Grid container item xs={6} justify="center" alignItems="flex-start">
+          <Grid container item xs={6} justify="center" alignItems="center">
             <ViewGrow>
               <div>
                 <Typography className={classes.desc}>
@@ -68,6 +66,9 @@ export default () => {
               </div>
             </ViewGrow>
           </Grid>
+        </Grid>
+        <Grid container item xs={12} spacing={1}>
+          
         </Grid>
       </Grid>
     </Banner>
