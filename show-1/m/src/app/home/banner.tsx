@@ -1,10 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import WebglInteractivePoints from '@/components/three/webgl-interactive-points';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: '#000000',
     color: theme.palette.common.white,
     width: '100%',
     display: 'flex',
@@ -28,11 +26,6 @@ export default ({no, children}: any) => {
   console.log(no);
   return (
     <div className={classes.root}>
-      <WebglInteractivePoints
-      //  positionX={no===1?100:undefined}
-      //  positionY={no===5?-50:undefined}
-      //  positionZ={no===5?900:undefined}
-      />
       <div className={classes.container}>
         {children}
       </div>
