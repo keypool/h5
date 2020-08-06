@@ -22,8 +22,8 @@ export default () => {
     <Banner no={3}>
       <Grid container>
         <Grid item xs={12}>
-          <Title text={'参展内容 - 2'}/>
-          <Typography variant={"body2"} style={{marginTop: '20px'}}>KeyPool - 矿池品牌</Typography>
+          <Title text={'KeyPool'}/>
+          <Typography variant={"body2"} style={{marginTop: '20px'}}>矿池品牌</Typography>
           <Typography variant={"body2"}>高效集群方案：CPU服务器 x GPU服务器 x 存储柜</Typography>
         </Grid>
         <Grid container item xs={12} justify="center" alignItems="flex-start">
@@ -43,10 +43,10 @@ export default () => {
                 - 规模效应优势强，成本更低
               </Typography>
               <Typography className={classes.desc}>
-                - 弹性配置，最大化利用计算资源，加快算力部署
+                - 最大化利用计算资源，加快算力部署
               </Typography>
               <Typography className={classes.desc}>
-                - 机房电力和网络资源稳定保障挖矿收益和存储服务
+                - 运维稳定，保障挖矿收益和存储服务
               </Typography>
             </>
           </ViewGrow>

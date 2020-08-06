@@ -19,37 +19,39 @@ export default () => {
     <Banner no={2}>
         <Grid container>
           <Grid item xs={12}>
-            <Title text={'参展内容 - 1'}/>
-            <Typography variant={"body2"} style={{marginTop: '20px'}}>Keystore企业级加密资产服务商</Typography>
+            <Title text={'Keystore'}/>
+            <Typography variant={"body2"} style={{marginTop: '20px'}}>企业级加密资产服务商</Typography>
             <Typography variant={"body2"}>安全、高效、专业</Typography>
+            <Typography variant={"body2"} style={{marginTop: '20px'}}>Institutional-grade Crypto</Typography>
+            <Typography variant={"body2"}>Asset Service Provider</Typography>
           </Grid>
           <Grid container item xs={12} spacing={1} style={{height: 140}}>
-            <Grid container item xs={8} justify="flex-start" alignItems="center">
+            <Grid container item xs={6} justify="flex-start" alignItems="center">
               <ViewGrow>
-                <img width={'60%'} src={`https://oss.faycz.com/keypool/kps1m/product-1.png`}/>
+                <img width={'80%'} src={`https://oss.faycz.com/keypool/kps1m/product-1.png`}/>
               </ViewGrow>
             </Grid>
-            <Grid container item xs={4} justify="center" alignItems="center">
+            <Grid container item xs={6} justify="center" alignItems="center">
               <ViewGrow>
-                <div style={{position: 'absolute', right: 0}}>
-                  <Typography>加密资产网银系统</Typography>
-                  <Typography style={{fontSize: '0.75rem'}}>Corporate Internet Banking</Typography>
+                <div>
+                  <Typography>加密资产网银</Typography>
+                  <Typography style={{fontSize: '0.75rem'}}>Keystore Enterprise</Typography>
                 </div>
               </ViewGrow>
             </Grid>
           </Grid>
           <Grid container item xs={12} spacing={1} style={{height: 140}}>
-            <Grid container item xs={4} justify="center" alignItems="center">
+            <Grid container item xs={6} justify="center" alignItems="center">
               <ViewGrow>
-                <div style={{position: 'absolute', left: 0}}>
-                  <Typography>加密资产存管服务</Typography>
-                  <Typography style={{fontSize: '0.75rem'}}>Custody Service</Typography>
+                <div>
+                  <Typography>Filecoin矿池资产安全方案</Typography>
+                  <Typography style={{fontSize: '0.75rem'}}>Filecoin Mining Pool Asset Security Solutions</Typography>
                 </div>
               </ViewGrow>
             </Grid>
-            <Grid container item xs={8} justify="flex-end" alignItems="center">
+            <Grid container item xs={6} justify="flex-end" alignItems="center">
               <ViewGrow>
-                <img width={'60%'} src={`https://oss.faycz.com/keypool/kps1m/product-2.png`}/>
+                <img width={'80%'} src={`https://oss.faycz.com/keypool/kps1m/product-2.png`}/>
               </ViewGrow>
             </Grid>
           </Grid>
