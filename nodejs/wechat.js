@@ -26,9 +26,9 @@ const auth = async (ctx) => {
       const signature = crypto.createHash('sha1').update(string1).digest('hex').toLowerCase();
       return {success: true, signature, timestamp, noncestr};
     }
-    return {success: false, errcode};
+    return {success: false, ...data};
   }
-  return {success: false, errcode};
+  return {success: false, ...data};
 }
 
 module.exports = {
