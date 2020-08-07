@@ -35,7 +35,7 @@ const auth = async (ctx) => {
       const {errcode, ticket} = data;
       if(!errcode){
         jsapi_ticketCache = ticket;
-        setTimeout(() => {jsapi_ticketCache = ''}, 6000);
+        setTimeout(() => {jsapi_ticketCache = ''}, 7000000);
         const signData = sign(ticket, url);
         return {success: true, ...signData, cache: false};
       }
