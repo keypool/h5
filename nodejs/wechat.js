@@ -3,7 +3,7 @@ const {getQueryString} = require('./lib/query');
 const shortid = require('shortid');
 const crypto = require('crypto');
 
-let jsapi_ticketCache = '';
+let jsapi_ticketCache = 'HoagFKDcsGMVCIY2vOjf9keH88HznriAeQlVfEXLPKNugxs7HwrGOFHg8sgqd7IdUw5VdFyCQV_V3LE_EPkKxQ';
 
 const appid = 'wx37956bd3003fe332';
 const secret = '97959f22a59214dbc92cb2ffcac798d5';
