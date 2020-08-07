@@ -13,12 +13,12 @@ const auth = async (ctx) => {
   const res = await fetch(accessTokenUrl);
   const data = await res.json();
   const {errcode, access_token} = data;
-  if(errcode === 0){
+  if(!errcode){
     const tiketUrl = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='+access_token+'&type=jsapi';
     const res = await fetch(tiketUrl);
     const data = await res.json();
     const {errcode, ticket} = data;
-    if(errcode === 0){
+    if(!errcode){
       const noncestr = shortid.generate();
       const jsapi_ticket = ticket;
       const timestamp = Date.parse(new Date())/1000;
