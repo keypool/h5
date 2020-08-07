@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 const {getQueryString} = require('./lib/query');
+const shortid = require('shortid');
 const crypto = require('crypto');
 
 const appid = 'wx37956bd3003fe332';
