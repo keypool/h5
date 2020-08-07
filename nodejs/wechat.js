@@ -10,7 +10,7 @@ const secret = '97959f22a59214dbc92cb2ffcac798d5';
 
 const accessTokenUrl = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='+appid+'&secret='+secret;
 
-const sign = (ticket) => {
+const sign = (ticket, url) => {
   const noncestr = shortid.generate();
   const jsapi_ticket = ticket;
   const timestamp = Date.parse(new Date())/1000;
@@ -22,7 +22,7 @@ const sign = (ticket) => {
 const auth = async (ctx) => {
   const url = getQueryString(ctx.request, 'url');
   if(jsapi_ticketCache.length>0){
-    const signData = sign(jsapi_ticketCache);
+    const signData = sign(jsapi_ticketCache, url);
     return {success: true, ...signData, cache: true};
   }else{
     const res = await fetch(accessTokenUrl);
@@ -36,7 +36,7 @@ const auth = async (ctx) => {
       if(!errcode){
         jsapi_ticketCache = ticket;
         setTimeout(() => {jsapi_ticketCache = ''}, 6000);
-        const signData = sign(ticket);
+        const signData = sign(ticket, url);
         return {success: true, ...signData, cache: false};
       }
       return {success: false, ...data};
