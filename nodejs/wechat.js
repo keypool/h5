@@ -20,7 +20,7 @@ const sign = (ticket, url) => {
 }
 
 const auth = async (ctx) => {
-  const url = getQueryString(ctx.request, 'url');
+  const url = decodeURIComponent(getQueryString(ctx.request, 'url'));
   if(jsapi_ticketCache.length>0){
     const signData = sign(jsapi_ticketCache, url);
     return {success: true, ...signData, cache: true, jsapi_ticketCache, url};
