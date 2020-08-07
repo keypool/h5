@@ -23,7 +23,7 @@ const auth = async (ctx) => {
   const url = getQueryString(ctx.request, 'url');
   if(jsapi_ticketCache.length>0){
     const signData = sign(jsapi_ticketCache, url);
-    return {success: true, ...signData, cache: true};
+    return {success: true, ...signData, cache: true, jsapi_ticketCache};
   }else{
     const res = await fetch(accessTokenUrl);
     const data = await res.json();
@@ -37,7 +37,7 @@ const auth = async (ctx) => {
         jsapi_ticketCache = ticket;
         setTimeout(() => {jsapi_ticketCache = ''}, 7000000);
         const signData = sign(ticket, url);
-        return {success: true, ...signData, cache: false};
+        return {success: true, ...signData, cache: false, jsapi_ticketCache};
       }
       return {success: false, ...data};
     }
