@@ -4,3 +4,4 @@
 
 declare const BMapGL: any;
 declare const BMap: any;
+declare const wx: any;

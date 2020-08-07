@@ -1,0 +1,52 @@
+name: nodejs ci
+
+on:
+  push:
+    branches:
+      - nodejs
+
+jobs:
+  build-and-deploy-to-server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: ssh-agent
+        uses: webfactory/ssh-agent@v0.1.1
+        with:
+          ssh-private-key: ${{ secrets.SERVER_SSH_KEY_HUAWEICLOUD_1 }}
+        env:
+          SERVER_HOST_NAME: ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }}
+
+      - name: Setup knownhosts
+        run: ssh-keyscan ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }} >> ~/.ssh/known_hosts
+
+      - name: Run SSH Command To init directory
+        run: ssh root@${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }} "(mkdir ${{ secrets.SERVER_SERVICE_TARGET }}/kps1m-nodejs || true)"
+
+      - name: Deploy nodejs to Server
+        uses: easingthemes/ssh-deploy@v2.1.2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_HUAWEICLOUD_1 }}
+          ARGS: '-rltgoDzvO --delete'
+          SOURCE: 'nodejs/'
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_NAME_HUAWEICLOUD_1 }}
+          TARGET: ${{ secrets.SERVER_SERVICE_TARGET }}/kps1m-nodejs
+
+      # - name: ssh-agent
+      #   uses: webfactory/ssh-agent@v0.1.1
+      #   with:
+      #     ssh-private-key: ${{ secrets.SERVER_SSH_KEY_HUAWEICLOUD_1 }}
+      #   env:
+      #     SERVER_HOST_NAME: ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }}
+
+      # - name: Setup knownhosts
+      #   run: ssh-keyscan ${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }} >> ~/.ssh/known_hosts
+
+      - name: Run SSH Command To build nodejs server
+        run: ssh root@${{ secrets.SERVER_HOST_NAME_HUAWEICLOUD_1 }} "(docker stop keypool-h5-nodejs || true) && (docker rm keypool-h5-nodejs || true) && (docker rmi keypool-h5-nodejs || true) && cd ${{ secrets.SERVER_SERVICE_TARGET }}/kps1m-nodejs && docker build -t keypool-h5-nodejs . && docker run --restart=always -d -p 3008:3000 --name keypool-h5-nodejs keypool-h5-nodejs"
+      
+
+  
