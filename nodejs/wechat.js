@@ -23,7 +23,7 @@ const auth = async (ctx) => {
   const url = getQueryString(ctx.request, 'url');
   if(jsapi_ticketCache.length>0){
     const signData = sign(jsapi_ticketCache, url);
-    return {success: true, ...signData, cache: true, jsapi_ticketCache};
+    return {success: true, ...signData, cache: true, jsapi_ticketCache, url};
   }else{
     const res = await fetch(accessTokenUrl);
     const data = await res.json();
@@ -37,13 +37,16 @@ const auth = async (ctx) => {
         jsapi_ticketCache = ticket;
         setTimeout(() => {jsapi_ticketCache = ''}, 7000000);
         const signData = sign(ticket, url);
-        return {success: true, ...signData, cache: false, jsapi_ticketCache};
+        return {success: true, ...signData, cache: false, jsapi_ticketCache, url};
       }
       return {success: false, ...data};
     }
     return {success: false, ...data};
   }
 }
+
+// const string1 = 'jsapi_ticket=HoagFKDcsGMVCIY2vOjf9keH88HznriAeQlVfEXLPKNugxs7HwrGOFHg8sgqd7IdUw5VdFyCQV_V3LE_EPkKxQ&noncestr=CMys4t8tr&timestamp=1596786736&url=http://www.faycz.com/kps1m/';
+// console.log(crypto.createHash('sha1').update(string1).digest('hex').toLowerCase());
 
 module.exports = {
   auth
