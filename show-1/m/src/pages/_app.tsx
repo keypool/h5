@@ -28,6 +28,7 @@ export default function MyApp(props: Props) {
         <meta name="keywords" content="KeyPool,云算力,filecoin,ipfs,filecoin挖矿,区块链,云存储,云计算,去中心化,方块云存储,资产存管"/>
         <meta name="description" content="KeyPool是Keystore旗下的基于Filecoin网络的技术服务平台,由资深区块链研发工程师，边缘计算及分布式存储专家倾力打造，创始团队来自Intel,分布式资本，奇虎360等企业"/>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <img src={'https://oss.faycz.com/keypool/kps1m/show-2.jpg'} style={{display: 'none'}}/>
         <link rel="icon" type="image/x-icon" href={`${PATH_PREFIX}/favicon.ico`} />
         <link rel="apple-touch-icon" href={`${PATH_PREFIX}/static/pwa.png`}></link>
         <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"/>
