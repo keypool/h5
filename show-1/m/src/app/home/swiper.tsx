@@ -24,10 +24,17 @@ SwiperCore.use([EffectCoverflow]);
 export default () => {
 
   // const [] = React.useState();
+  // const [mobile, setMobile] = React.useState(true);
+
+  // React.useEffect(() => {
+  //   const isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+  //   setMobile(Boolean(isMobile));
+  // }, []);
 
   return (
     <>
       <Swiper
+        // style={mobile ? {maxWidth: '500px'} : {}}
         speed={2000}
         loop
         // effect="fade"

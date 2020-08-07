@@ -83,7 +83,7 @@ export default () => {
                   <Typography variant={"body2"}>深圳会展中心 6号馆</Typography>
                 </ViewGrow>
                 <ViewGrow>
-                  <Typography className={classes.desc}>展览馆 深圳市-福田区-福田街道福安社区福华...</Typography>
+                  <Typography className={classes.desc}>广东省-深圳市-福田区-福田街道福安社区福华三路与金田路交叉口</Typography>
                 </ViewGrow>
                 <ViewGrow>
                   <a className={classes.link} onClick={() => window.open(mapUrl)}>去这里 &gt;</a>
